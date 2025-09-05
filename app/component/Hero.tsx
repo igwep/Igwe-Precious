@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "./ui/Button";
 import { FloatingElements } from "./FloatingElements";
+import Image from "next/image";
+import profile from "../../public/profile.jpg";
 
 export function Hero() {
   const scrollToContact = () => {
@@ -70,11 +72,14 @@ export function Hero() {
               whileHover={{ scale: 1.03 }}
               className="relative w-56 h-56 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-gradient-to-r from-purple-500 to-blue-500 shadow-2xl"
             >
-              <div className="w-full h-full bg-gradient-to-br from-purple-400 to-blue-500 flex items-center justify-center">
-                <div className="text-white text-6xl lg:text-8xl font-bold">
-                  IP
-                </div>
-              </div>
+              {/* Profile Image */}
+              <Image
+                src={profile.src} //  replace with your image path in public/
+                alt="Profile Picture"
+                fill //  makes it fill the parent container
+                className="object-cover object-top"
+                priority //  loads immediately for above-the-fold images
+              />
             </motion.div>
 
             {/* Floating particles (CSS animation for performance) */}

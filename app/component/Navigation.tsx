@@ -54,7 +54,7 @@ export function Navigation() {
               transition={{ delay: 0.2 }}
               className="font-bold text-xl bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"
             >
-              Portfolio
+              IGWE PRECIOUS
             </motion.div>
 
             <div className="flex items-center space-x-8">
@@ -71,7 +71,7 @@ export function Navigation() {
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 group-hover:w-full transition-all duration-300" />
                 </motion.button>
               ))}
-              <ThemeToggle />
+              {/*  <ThemeToggle /> */}
             </div>
           </div>
         </div>
@@ -100,20 +100,20 @@ export function Navigation() {
             ))}
 
             {/* Theme Toggle for Mobile */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
               className="px-2 py-2"
             >
               <ThemeToggle />
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </motion.nav>
 
       {/* Spacer for mobile so bottom nav doesn’t cover content */}
-     {/*  <div className="h-16 md:hidden" /> */}
+      {/*  <div className="h-16 md:hidden" /> */}
     </>
   );
 }

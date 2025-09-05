@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -93,17 +93,21 @@ export function Projects() {
                 <Card className="overflow-hidden border-[#1E293B]/50 hover:border-[#1E293B] transition-all duration-300 hover:shadow-lg">
                   <CardContent className="p-0">
                     <div
-                      className={`grid lg:grid-cols-2 gap-0 ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
+                      className={`grid lg:grid-cols-2 gap-0 ${
+                        index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
+                      }`}
                     >
                       <div
-                        className={`relative h-64 lg:h-auto ${index % 2 === 1 ? "lg:col-start-2" : ""}`}
+                        className={`relative h-64 lg:h-auto ${
+                          index % 2 === 1 ? "lg:col-start-2" : ""
+                        }`}
                       >
                         <Image
-    src={project.image}
-    alt={project.title}
-    fill
-    className="object-cover"
-  />
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          className="object-cover"
+                        />
                         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20" />
                       </div>
 
@@ -189,23 +193,23 @@ export function Projects() {
                   whileHover={{ y: -5 }}
                   className="group"
                 >
-                  <Card className="h-full border-border/50 hover:border-border transition-all duration-300 hover:shadow-lg">
+                  <Card className="h-full border-[#1E293B]/50 hover:border-[#1E293B] transition-all duration-300 hover:shadow-lg">
                     <CardContent className="p-6 space-y-4">
                       <div className="relative h-48 rounded-lg overflow-hidden">
-                      <Image
-  src={project.image}
-  alt={project.title}
-  width={500} // set an appropriate width
-  height={500} // set an appropriate height
-  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-/>
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          width={500} // set an appropriate width
+                          height={500} // set an appropriate height
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
                       </div>
 
                       <div className="space-y-3">
                         <h4 className="text-xl font-semibold">
                           {project.title}
                         </h4>
-                        <p className="text-muted-foreground text-sm leading-relaxed">
+                        <p className="text-[#94A3B8] text-sm leading-relaxed">
                           {project.description}
                         </p>
                       </div>
@@ -215,20 +219,25 @@ export function Projects() {
                           <Badge
                             key={tech}
                             variant="secondary"
-                            className="text-xs"
+                            className="text-xs hover:bg-[#1E293B]/70"
                           >
                             {tech}
                           </Badge>
                         ))}
                         {project.technologies.length > 3 && (
-                          <Badge variant="secondary" className="text-xs">
+                          <Badge variant="secondary" className="text-xs ">
                             +{project.technologies.length - 3}
                           </Badge>
                         )}
                       </div>
 
                       <div className="flex items-center space-x-3 pt-2">
-                        <Button asChild variant="ghost" size="sm">
+                        <Button
+                          asChild
+                          variant="ghost"
+                          size="sm"
+                          className="hover:bg-[#1E293B]/50"
+                        >
                           <a
                             href={project.githubUrl}
                             target="_blank"
@@ -237,7 +246,12 @@ export function Projects() {
                             <Github className="h-4 w-4" />
                           </a>
                         </Button>
-                        <Button asChild variant="ghost" size="sm">
+                        <Button
+                          asChild
+                          variant="ghost"
+                          size="sm"
+                          className="hover:bg-[#1E293B]/50"
+                        >
                           <a
                             href={project.liveUrl}
                             target="_blank"
