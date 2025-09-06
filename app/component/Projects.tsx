@@ -27,7 +27,7 @@ const projects = [
       "A blogging platform that allows users to create, share, and manage their blogs through Sanity UI.",
     image: blogspot,
     technologies: ["Next.js", "Sanity CMS", "Tailwind CSS"],
-    githubUrl: "https://github.com", // Replace with actual GitHub repo
+    githubUrl: "https://github.com/igwep/blogged", // Replace with actual GitHub repo
     liveUrl: "https://blogged-48qg.vercel.app",
     featured: true,
   },
@@ -37,7 +37,7 @@ const projects = [
       "Shop.co is a modern e-commerce platform built with Next.js, styled with Tailwind CSS, and powered by Firebase for auth and data. It features Google sign-in, product search, and cart management.",
     image: shopCo,
     technologies: ["Next.js", "Firebase", "Tailwind CSS"],
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/igwep/ShopCo",
     liveUrl: "https://shop-co-three-blue.vercel.app/",
     featured: false,
   },
@@ -67,7 +67,7 @@ const projects = [
       "A responsive website for an individual lawyer, built with React and styled with Tailwind CSS.",
     image: epiphany,
     technologies: ["React", "Tailwind CSS"],
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/igwep/EPIPHANY-LEGAL-PRACTITIONERS",
     liveUrl: "https://epiphany-legal-practitioners4.onrender.com",
     featured: false,
   },
@@ -79,28 +79,28 @@ const projects = [
       "My personal portfolio showcasing projects, skills, and experience as a frontend developer.",
     image: portfolio, // add an imported image or screenshot
     technologies: ["Next.js", "Tailwind CSS"],
-    githubUrl: "", // no repo link
-    liveUrl: "https://your-portfolio-link.com", // replace with actual
+    githubUrl: "https://github.com/igwep/Igwe-Precious",
+    liveUrl: "https://igwe-precious.vercel.app/",
     featured: true,
   },
   {
     title: "MentorShore",
     description:
       "Helped build the MentorShore platform, enabling seamless mentorship connections with modern, responsive UI components.",
-    image: mentorshore, // add an imported image or screenshot
+    image: mentorshore,
     technologies: ["React", "Tailwind CSS"],
-    githubUrl: "", // no repo link
-    liveUrl: "https://mentorshore.com", // replace with actual link
+    githubUrl: "",
+    liveUrl: "https://mentorshore.com",
     featured: true,
   },
   {
     title: "Coconut Logistics",
     description:
       "Collaborated with the Coconut development team to build and enhance the Coconut logistics platform, streamlining operations and improving delivery efficiency. Built and deployed reusable, responsive UI components with React, reducing code duplication by 30%.",
-    image: coconut, // add an imported image or screenshot
+    image: coconut,
     technologies: ["Next", "Tailwind CSS"],
     githubUrl: "", // no repo link
-    liveUrl: "https://withcoconut.com", // replace with actual link
+    liveUrl: "https://withcoconut.com",
     featured: true,
   },
 ];
