@@ -7,48 +7,101 @@ import { Card, CardContent } from "./ui/Card";
 import { Button } from "./ui/Button";
 import { Badge } from "./ui/Badge";
 import { ExternalLink, Github } from "lucide-react";
+import {
+  blogspot,
+  shopCo,
+  epiphany,
+  aiResume,
+  portfolio,
+  coconut,
+  mentorshore,
+  eshelf,
+} from "../../assets";
+//import { fa } from "zod/locales";
 //import { MiniFloatingElements } from "./MiniFloatingElements";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "BlogSpot",
     description:
-      "A full-featured e-commerce platform built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
-    image: "/placeholder.svg",
-    technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
+      "A blogging platform that allows users to create, share, and manage their blogs through Sanity UI.",
+    image: blogspot,
+    technologies: ["Next.js", "Sanity CMS", "Tailwind CSS"],
+    githubUrl: "https://github.com", // Replace with actual GitHub repo
+    liveUrl: "https://blogged-48qg.vercel.app",
     featured: true,
   },
   {
-    title: "Task Management App",
+    title: "Shop.co",
     description:
-      "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    image: "/placeholder.svg",
-    technologies: ["React", "TypeScript", "Socket.io", "MongoDB"],
+      "Shop.co is a modern e-commerce platform built with Next.js, styled with Tailwind CSS, and powered by Firebase for auth and data. It features Google sign-in, product search, and cart management.",
+    image: shopCo,
+    technologies: ["Next.js", "Firebase", "Tailwind CSS"],
     githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
+    liveUrl: "https://shop-co-three-blue.vercel.app/",
+    featured: false,
+  },
+  {
+    title: "AI Resume Analyzer",
+    description:
+      "An AI-powered resume analyzer that helps job seekers optimize their resumes by providing insights, keyword analysis, and improvement suggestions.",
+    image: aiResume,
+    technologies: ["Next.js", "TypeScript", "OpenAI API", "Tailwind CSS"],
+    githubUrl: "https://github.com",
+    liveUrl: "https://ai-resume-analyzer-seven-phi.vercel.app",
+    featured: false,
+  },
+  {
+    title: "EshelfAfrica",
+    description:
+      "EshelfAfrica is an e-commerce platform that connects buyers and sellers of books.",
+    image: eshelf,
+    technologies: ["Tailwind CSS", "HTML"],
+    githubUrl: "https://github.com",
+    liveUrl: "https://eshelfafrica.onrender.com",
+    featured: false,
+  },
+  {
+    title: "Epiphany",
+    description:
+      "A responsive website for an individual lawyer, built with React and styled with Tailwind CSS.",
+    image: epiphany,
+    technologies: ["React", "Tailwind CSS"],
+    githubUrl: "https://github.com",
+    liveUrl: "https://epiphany-legal-practitioners4.onrender.com",
+    featured: false,
+  },
+
+  //  New Featured Projects
+  {
+    title: "Portfolio",
+    description:
+      "My personal portfolio showcasing projects, skills, and experience as a frontend developer.",
+    image: portfolio, // add an imported image or screenshot
+    technologies: ["Next.js", "Tailwind CSS"],
+    githubUrl: "", // no repo link
+    liveUrl: "https://your-portfolio-link.com", // replace with actual
     featured: true,
   },
   {
-    title: "Weather Dashboard",
+    title: "MentorShore",
     description:
-      "A responsive weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics.",
-    image: "/placeholder.svg",
-    technologies: ["React", "Next.js", "Chart.js", "OpenWeatherMap API"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-    featured: false,
+      "Helped build the MentorShore platform, enabling seamless mentorship connections with modern, responsive UI components.",
+    image: mentorshore, // add an imported image or screenshot
+    technologies: ["React", "Tailwind CSS"],
+    githubUrl: "", // no repo link
+    liveUrl: "https://mentorshore.com", // replace with actual link
+    featured: true,
   },
   {
-    title: "Portfolio Website",
+    title: "Coconut Logistics",
     description:
-      "A modern, responsive portfolio website built with React and Framer Motion, featuring smooth animations and dark mode support.",
-    image: "/placeholder.svg",
-    technologies: ["React", "Framer Motion", "Tailwind CSS", "TypeScript"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-    featured: false,
+      "Collaborated with the Coconut development team to build and enhance the Coconut logistics platform, streamlining operations and improving delivery efficiency. Built and deployed reusable, responsive UI components with React, reducing code duplication by 30%.",
+    image: coconut, // add an imported image or screenshot
+    technologies: ["Next", "Tailwind CSS"],
+    githubUrl: "", // no repo link
+    liveUrl: "https://withcoconut.com", // replace with actual link
+    featured: true,
   },
 ];
 
@@ -121,29 +174,35 @@ export function Projects() {
                           </p>
                         </div>
 
-                        <div className="flex flex-wrap gap-2">
-                          {project.technologies.map((tech) => (
-                            <Badge
-                              key={tech}
-                              variant="outline"
-                              className="text-sm"
-                            >
-                              {tech}
-                            </Badge>
-                          ))}
-                        </div>
+                        {project.technologies?.length > 0 && (
+                          <div className="flex flex-wrap gap-2">
+                            {project.technologies.map((tech) => (
+                              <Badge
+                                key={tech}
+                                variant="outline"
+                                className="text-sm"
+                              >
+                                {tech}
+                              </Badge>
+                            ))}
+                          </div>
+                        )}
 
                         <div className="flex items-center space-x-4">
-                          <Button asChild variant="outline" size="sm">
-                            <a
-                              href={project.githubUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <Github className="h-4 w-4 mr-2" />
-                              Code
-                            </a>
-                          </Button>
+                          {project.githubUrl ? (
+                            <Button asChild variant="outline" size="sm">
+                              <a
+                                href={project.githubUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <Github className="h-4 w-4 mr-2" />
+                                Code
+                              </a>
+                            </Button>
+                          ) : (
+                            ""
+                          )}
                           <Button
                             asChild
                             size="sm"

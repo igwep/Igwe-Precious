@@ -27,7 +27,7 @@ const experiences = [
     company: "Coconut Africa",
     period: "2025 - Present",
     description:
-      "Collaborated with the Coconut development team to build and enhance the Coconut logistics platform, streamlining operations and improving delivery efficiency. Worked closely with designers and backend developers to implement UI components, optimize performance, integrate APIs, and improve overall user experience.",
+      "Collaborated with the Coconut development team to build and enhance the Coconut logistics platform, streamlining operations and improving delivery efficiency. Built and deployed reusable, responsive UI components with React, speeding up feature development and reducing code duplication by 30%",
   },
   {
     title: "Coding Instructor",
@@ -56,9 +56,8 @@ const experiences = [
     period: "2021 - 2023",
     description:
       "Developed websites for small retail shops and individual clients, implementing modern web technologies and best practices to deliver user-friendly, responsive designs.",
-  }
+  },
 ];
-
 
 export function About() {
   const ref = useRef(null);
@@ -67,14 +66,13 @@ export function About() {
 
   const { scrollYProgress } = useScroll({
     target: experienceRef,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
   });
 
   const progressHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 relative">
-     
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           ref={ref}
@@ -87,9 +85,9 @@ export function About() {
             About Me
           </h2>
           <p className="text-lg text-[#94A3B8] max-w-3xl mx-auto">
-            I&apos;m a passionate frontend developer with over 4 years of experience
-            creating beautiful, functional web applications. I love turning
-            complex problems into simple, elegant solutions.
+            I&apos;m a passionate frontend developer with over 4 years of
+            experience creating beautiful, functional web applications. I love
+            turning complex problems into simple, elegant solutions.
           </p>
         </motion.div>
 
@@ -109,9 +107,10 @@ export function About() {
                 provide exceptional user experiences.
               </p>
               <p>
-                When I&apos;m not coding, you can find me exploring new technologies,
-                contributing to open source projects, or enjoying a good cup of
-                coffee while reading about the latest industry trends.
+                When I&apos;m not coding, you can find me exploring new
+                technologies, contributing to open source projects, or enjoying
+                a good cup of coffee while reading about the latest industry
+                trends.
               </p>
             </div>
 
