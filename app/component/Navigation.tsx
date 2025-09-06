@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ThemeToggle } from "./ui/ThemeToggle";
 import { Home, User, FolderOpen, Mail } from "lucide-react";
 
 const navItems = [
@@ -13,13 +12,32 @@ const navItems = [
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("home");
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+
+      // track active section
+      const sections = navItems.map((item) =>
+        document.querySelector(item.href)
+      ) as HTMLElement[];
+
+      const scrollPos = window.scrollY + window.innerHeight / 3; // offset
+
+      for (const section of sections) {
+        if (
+          section.offsetTop <= scrollPos &&
+          section.offsetTop + section.offsetHeight > scrollPos
+        ) {
+          setActiveSection(section.id);
+          break;
+        }
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // run on mount
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -65,13 +83,22 @@ export function Navigation() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 * index }}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-foreground/80 hover:text-foreground transition-colors relative group"
+                  className={`relative group transition-colors ${
+                    activeSection === item.href.replace("#", "")
+                      ? "text-purple-600 font-semibold"
+                      : "text-foreground/80 hover:text-foreground"
+                  }`}
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 group-hover:w-full transition-all duration-300" />
+                  <span
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 transition-all duration-300 ${
+                      activeSection === item.href.replace("#", "")
+                        ? "w-full"
+                        : "w-0 group-hover:w-full"
+                    }`}
+                  />
                 </motion.button>
               ))}
-              {/*  <ThemeToggle /> */}
             </div>
           </div>
         </div>
@@ -92,28 +119,19 @@ export function Navigation() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * index }}
                 onClick={() => scrollToSection(item.href)}
-                className="flex flex-col items-center space-y-1 px-2 py-2 rounded-xl text-foreground/70 hover:text-foreground hover:bg-accent/50 transition-colors"
+                className={`flex flex-col items-center space-y-1 px-2 py-2 rounded-xl transition-colors ${
+                  activeSection === item.href.replace("#", "")
+                    ? "text-purple-600"
+                    : "text-foreground/70 hover:text-foreground hover:bg-accent/50"
+                }`}
               >
                 <item.icon className="w-5 h-5" />
                 <span className="text-xs font-medium">{item.name}</span>
               </motion.button>
             ))}
-
-            {/* Theme Toggle for Mobile */}
-            {/* <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="px-2 py-2"
-            >
-              <ThemeToggle />
-            </motion.div> */}
           </div>
         </div>
       </motion.nav>
-
-      {/* Spacer for mobile so bottom nav doesn’t cover content */}
-      {/*  <div className="h-16 md:hidden" /> */}
     </>
   );
 }

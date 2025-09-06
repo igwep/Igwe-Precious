@@ -18,13 +18,14 @@ export default function Home() {
         <Hero />
         <About />
         <Projects />
-        <Contact /> *
+        <Contact />
       </main>
       {/* Footer */}
-      <footer className="py-8 border-[#1E293B] border-t px-4 sm:px-6 lg:px-8">
+      <footer className="py-8 pb-32 border-[#1E293B] border-t px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-[#94A3B8]">
-            © 2025 Alex Johnson. Built with React, TypeScript, and Tailwind CSS.
+            © 2025 Igwe Precious. Built with Next js, TypeScript, and Tailwind
+            CSS.
           </p>
         </div>
       </footer>
