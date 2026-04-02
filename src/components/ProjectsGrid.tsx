@@ -42,6 +42,16 @@ const projects: Project[] = [
     featured: true,
   },
   {
+    title: "Greener Pastures Investments",
+    description:
+      "An online savings platform for small Nigerian businesses offering loan applications, investment opportunities, marketplace services, and much more.",
+    image: "greenerpastures",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "PostgreSQL", "Node.js", "Express", "Prisma", "Supabase"],
+    githubUrl: "",
+    liveUrl: "https://www.greener-pastures-investments.com.ng/",
+    featured: true,
+  },
+  {
     title: "BlogSpot",
     description:
       "A blogging platform that allows users to create, share, and manage their blogs through Sanity UI.",
@@ -160,7 +170,7 @@ export function ProjectsGrid() {
         <h2 className="text-5xl md:text-7xl font-black tracking-tighter">
           SELECTED_WORKS
         </h2>
-        <span className="font-mono text-sm hidden md:block">2023 — 2024</span>
+        <span className="font-mono text-sm hidden md:block">2022 — 2026</span>
       </div>
 
       <motion.div
