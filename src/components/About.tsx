@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 export function About() {
   return (
@@ -52,21 +51,17 @@ export function About() {
 
           <div className="prose prose-lg text-espresso mb-12">
             <p className="mb-6 font-medium">
-              Based in Lagos, Nigeria, I'm a frontend-focused full-stack engineer who graduated from Benson Idahosa University. I believe in
-              the beauty of raw functionality and creating web experiences that are fast,
-              accessible, and unapologetically bold.
+              Based in Lagos, Nigeria, I'm a Software Engineer and IT Support Specialist with 4 years of frontend and 2 years of backend experience. I graduated from Benson Idahosa University with a BSC in Computer Science.
             </p>
             <p className="font-medium">
-              With a passion for modern web technologies and a keen eye for design, I build
-              applications that respect the user's intelligence while delivering exceptional
-              performance and user experience.
+              I build scalable, high-performance web applications and support internal business systems. From developing end-to-end solutions to troubleshooting technical issues, I deliver reliable, user-focused systems that align with business goals and enhance overall user experience.
             </p>
           </div>
 
           <div className="space-y-8">
             <div>
               <h3 className="font-mono font-bold text-sm mb-4 border-b-2 border-espresso pb-2 inline-block">
-                CORE_STACK
+                DEVELOPMENT_SKILLS
               </h3>
               <ul className="grid grid-cols-2 gap-x-8 gap-y-2 font-mono text-sm">
                 <li className="flex items-center gap-2">
@@ -88,43 +83,78 @@ export function About() {
                   <span className="w-1.5 h-1.5 bg-forest"></span>Next.js
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-forest"></span>Firebase
-                </li>
-                <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-forest"></span>Node.js
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-forest"></span>Sanity CMS
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-forest"></span>GitHub
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-forest"></span>Git
+                  <span className="w-1.5 h-1.5 bg-forest"></span>Express.js
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-forest"></span>PHP
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-forest"></span>Figma
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-forest"></span>REST API
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-forest"></span>WordPress
-                </li>
-                <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-forest"></span>Laravel
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-forest"></span>MongoDB
+                  <span className="w-1.5 h-1.5 bg-forest"></span>Tailwind CSS
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-forest"></span>Shadcn UI
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-forest"></span>Bootstrap
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-forest"></span>SEO
+                  <span className="w-1.5 h-1.5 bg-forest"></span>Figma
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-forest"></span>REST APIs
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-forest"></span>WordPress
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-mono font-bold text-sm mb-4 border-b-2 border-espresso pb-2 inline-block">
+                IT_SUPPORT_&_SYSTEMS
+              </h3>
+              <ul className="grid grid-cols-2 gap-x-8 gap-y-2 font-mono text-sm">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-forest"></span>IT Support
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-forest"></span>Technical Troubleshooting
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-forest"></span>Linux
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-forest"></span>Git/GitHub
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-forest"></span>Firebase
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-forest"></span>Supabase
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-forest"></span>MySQL
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-forest"></span>PostgreSQL
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-forest"></span>MongoDB
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-forest"></span>Sanity CMS
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-forest"></span>Database Management
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-forest"></span>Core Banking Systems
                 </li>
               </ul>
             </div>
@@ -133,34 +163,48 @@ export function About() {
               <h3 className="font-mono font-bold text-sm mb-4 border-b-2 border-espresso pb-2 inline-block">
                 EXPERIENCE
               </h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-baseline border-b border-espresso/20 pb-2">
-                  <span className="font-bold">Software Developer @ Unliag Microfinance Bank</span>
-                  <span className="font-mono text-sm">2026</span>
+              <div className="space-y-6">
+                <div className="border-b border-espresso/20 pb-4">
+                  <div className="flex justify-between items-baseline mb-2">
+                    <span className="font-bold">Software Developer / IT Support @ Unilag Microfinance Bank</span>
+                    <span className="font-mono text-sm">2025 — Present</span>
+                  </div>
+                  <p className="text-sm opacity-80">Redesigned bank website improving UX by 35% and developed internal tools that streamlined operations across the organization.</p>
                 </div>
-                <div className="flex justify-between items-baseline border-b border-espresso/20 pb-2">
-                  <span className="font-bold">Software Developer @ MentorShore</span>
-                  <span className="font-mono text-sm">2025 — 2026</span>
+                <div className="border-b border-espresso/20 pb-4">
+                  <div className="flex justify-between items-baseline mb-2">
+                    <span className="font-bold">Front End Developer @ Coconut Africa</span>
+                    <span className="font-mono text-sm">05/2025 — 01/2026</span>
+                  </div>
+                  <p className="text-sm opacity-80">Built reusable React components, reducing code duplication by 30% and speeding up feature development.</p>
                 </div>
-                <div className="flex justify-between items-baseline border-b border-espresso/20 pb-2">
-                  <span className="font-bold">Frontend Developer @ Coconut Africa</span>
-                  <span className="font-mono text-sm">2025 — 2026</span>
+                <div className="border-b border-espresso/20 pb-4">
+                  <div className="flex justify-between items-baseline mb-2">
+                    <span className="font-bold">PHP Developer (Contract) @ Kayd Web Solutions</span>
+                    <span className="font-mono text-sm">12/2025 — 03/2026</span>
+                  </div>
+                  <p className="text-sm opacity-80">Contributed to design and development of digital products aligned with business goals.</p>
                 </div>
-                <div className="flex justify-between items-baseline border-b border-espresso/20 pb-2">
-                  <span className="font-bold">Frontend Developer (Refinedwin Project)</span>
-                  <span className="font-mono text-sm">2025 — 2026</span>
+                <div className="border-b border-espresso/20 pb-4">
+                  <div className="flex justify-between items-baseline mb-2">
+                    <span className="font-bold">Front End Developer @ MentorShore</span>
+                    <span className="font-mono text-sm">2024 — 2025</span>
+                  </div>
+                  <p className="text-sm opacity-80">Developed responsive web interfaces using React.js, collaborated on UI components and API integration in agile environment.</p>
                 </div>
-                <div className="flex justify-between items-baseline border-b border-espresso/20 pb-2">
-                  <span className="font-bold">PHP Developer (Contract) @ Kayd Web Solutions</span>
-                  <span className="font-mono text-sm">2025</span>
+                <div className="border-b border-espresso/20 pb-4">
+                  <div className="flex justify-between items-baseline mb-2">
+                    <span className="font-bold">IT Technician @ Pear SDC</span>
+                    <span className="font-mono text-sm">03/2022 — 08/2023</span>
+                  </div>
+                  <p className="text-sm opacity-80">Troubleshot hardware/software issues, supported internal web applications, and provided technical support to team members.</p>
                 </div>
-                <div className="flex justify-between items-baseline border-b border-espresso/20 pb-2">
-                  <span className="font-bold">Coding Instructor @ Phoenix Coding Institute</span>
-                  <span className="font-mono text-sm">2025</span>
-                </div>
-                <div className="flex justify-between items-baseline border-b border-espresso/20 pb-2">
-                  <span className="font-bold">Web Developer (Freelance)</span>
-                  <span className="font-mono text-sm">2022 — 2026</span>
+                <div className="border-b border-espresso/20 pb-4">
+                  <div className="flex justify-between items-baseline mb-2">
+                    <span className="font-bold">Coding Instructor @ Phoenix Coding Institute</span>
+                    <span className="font-mono text-sm">2025</span>
+                  </div>
+                  <p className="text-sm opacity-80">Taught hundreds of students the basics of front-end development across Lagos state.</p>
                 </div>
               </div>
             </div>

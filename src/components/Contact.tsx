@@ -113,6 +113,35 @@ export function Contact() {
           </div>
         </motion.div>
 
+        {/* Contact Info */}
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 20
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0
+          }}
+          viewport={{
+            once: true
+          }}
+          className="mt-12 text-center">
+          <h3 className="font-mono text-sm mb-6 opacity-70">{'>'} DIRECT_CONTACT</h3>
+          <div className="flex justify-center gap-6 mb-8">
+            <a
+              href="tel:+2347065155757"
+              className="group flex flex-col items-center gap-2 p-4 border-2 border-cream/30 hover:border-cream hover:bg-cream hover:text-espresso transition-all duration-300">
+              <span className="font-mono text-xs">+234 706 515 5757</span>
+            </a>
+            <a
+              href="mailto:igwep5537@gmail.com"
+              className="group flex flex-col items-center gap-2 p-4 border-2 border-cream/30 hover:border-cream hover:bg-cream hover:text-espresso transition-all duration-300">
+              <span className="font-mono text-xs">igwep5537@gmail.com</span>
+            </a>
+          </div>
+        </motion.div>
+
         {/* Social Media Links */}
         <motion.div
           initial={{

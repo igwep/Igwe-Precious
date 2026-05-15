@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowDownIcon, TerminalIcon } from "lucide-react";
 export function Hero() {
@@ -53,7 +53,7 @@ export function Hero() {
             }}
             className="mb-4 font-mono text-forest font-bold tracking-wider"
           >
-            FULL STACK DEVELOPER
+            FULL STACK DEVELOPER / IT SUPPORT
           </motion.div>
 
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none mb-8 break-words">
